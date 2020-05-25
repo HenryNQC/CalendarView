@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         calendarView.marksWeekends = true
         
         
-        calendarView.backgroundColor = UIColor(red: 252/255, green: 252/255, blue: 252/255, alpha: 1.0)
+        calendarView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
     }
     
     

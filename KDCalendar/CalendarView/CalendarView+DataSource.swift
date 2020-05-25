@@ -234,6 +234,8 @@ extension CalendarView: UICollectionViewDataSource {
         
         dayCell.eventsCount = self.eventsByIndexPath[indexPath]?.count ?? 0
         
+        dayCell.eventType = CalendarDayCell.EventType.star
+        
         return dayCell
     }
 }

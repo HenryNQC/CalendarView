@@ -28,6 +28,12 @@ import UIKit
 open class CalendarDayCell: UICollectionViewCell {
     
     var style: CalendarView.Style = CalendarView.Style.Default
+    var imageName: String = ""
+    
+    public enum EventType{
+        case star
+        case dot
+    }
     
     override open var description: String {
         let dayString = self.textLabel.text ?? " "
@@ -38,6 +44,16 @@ open class CalendarDayCell: UICollectionViewCell {
         didSet {
             self.dotsView.isHidden = (eventsCount == 0)
             self.setNeedsLayout()
+        }
+    }
+    
+    var eventType = EventType.dot{
+        didSet{
+            if eventType == EventType.dot {
+                imageName = "ic_dot"
+            }else{
+                imageName = "ic_star"
+            }
         }
     }
     
@@ -136,7 +152,7 @@ open class CalendarDayCell: UICollectionViewCell {
     
     
     let textLabel   = UILabel()
-    let dotsView    = UIView()
+    let dotsView    = UIImageView()
     let bgView      = UIView()
     
     override init(frame: CGRect) {
@@ -144,10 +160,9 @@ open class CalendarDayCell: UICollectionViewCell {
         self.textLabel.textAlignment = NSTextAlignment.center
         
         
-        self.dotsView.backgroundColor = style.cellEventColor
+//        self.dotsView.backgroundColor = style.cellEventColor
         
         self.textLabel.font = style.cellFont
-        
         
         super.init(frame: frame)
         
@@ -183,7 +198,8 @@ open class CalendarDayCell: UICollectionViewCell {
         let size                            = self.bounds.height * 0.08 // always a percentage of the whole cell
         self.dotsView.frame                 = CGRect(x: 0, y: 0, width: size, height: size)
         self.dotsView.center                = CGPoint(x: self.textLabel.center.x, y: self.bounds.height - (2.5 * size))
-        self.dotsView.layer.cornerRadius    = size * 0.5 // round it
+//        self.dotsView.layer.cornerRadius    = size * 0.5 // round it
+        self.dotsView.image = UIImage.init(named: imageName)
         
         switch style.cellShape {
         case .square:
