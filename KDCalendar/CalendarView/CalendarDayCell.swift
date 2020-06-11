@@ -37,9 +37,9 @@ open class CalendarDayCell: UICollectionViewCell {
         var imageName: UIImage? {
             switch self {
             case .star:
-                return UIImage.init(named: "ic_dot")
-            case .dot:
                 return UIImage.init(named: "ic_star")
+            case .dot:
+                return UIImage.init(named: "ic_dot")
             }
         }
     }
