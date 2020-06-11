@@ -37,12 +37,14 @@ struct EventLocation {
 public struct CalendarEvent {
     public let title: String
     public let startDate: Date
-    public let endDate:Date
+    public let endDate: Date
+    public let eventType: CalendarDayCell.EventType
     
-    public init(title: String, startDate: Date, endDate: Date) {
+    public init(title: String, startDate: Date, endDate: Date, eventType: CalendarDayCell.EventType) {
         self.title = title;
         self.startDate = startDate;
         self.endDate = endDate;
+        self.eventType = eventType
     }
 }
 
@@ -500,7 +502,8 @@ extension CalendarView {
         }
     }
     
-    @discardableResult public func addEvent(_ title: String, date startDate: Date, duration hours: NSInteger = 1) -> Bool {
+    @discardableResult public func addEvent(_ title: String, date startDate: Date, duration hours: NSInteger = 1,
+                                            eventType: CalendarDayCell.EventType = CalendarDayCell.EventType.dot) -> Bool {
         
         var components = DateComponents()
         components.hour = hours
@@ -509,7 +512,7 @@ extension CalendarView {
             return false
         }
         
-        let event = CalendarEvent(title: title, startDate: startDate, endDate: endDate)
+        let event = CalendarEvent(title: title, startDate: startDate, endDate: endDate, eventType: eventType)
         
         guard EventsManager.add(event: event) else {
             return false

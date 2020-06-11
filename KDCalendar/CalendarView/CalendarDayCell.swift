@@ -30,9 +30,18 @@ open class CalendarDayCell: UICollectionViewCell {
     var style: CalendarView.Style = CalendarView.Style.Default
     var imageName: String = ""
     
-    public enum EventType{
-        case star
-        case dot
+    public enum EventType: Int{
+        case star = 0
+        case dot = 1
+        
+        var imageName: UIImage? {
+            switch self {
+            case .star:
+                return UIImage.init(named: "ic_dot")
+            case .dot:
+                return UIImage.init(named: "ic_star")
+            }
+        }
     }
     
     override open var description: String {
@@ -47,15 +56,7 @@ open class CalendarDayCell: UICollectionViewCell {
         }
     }
     
-    var eventType = EventType.dot{
-        didSet{
-            if eventType == EventType.dot {
-                imageName = "ic_dot"
-            }else{
-                imageName = "ic_star"
-            }
-        }
-    }
+    var eventType = EventType.dot
     
     var day: Int? {
         set {
@@ -199,7 +200,7 @@ open class CalendarDayCell: UICollectionViewCell {
         self.dotsView.frame                 = CGRect(x: 0, y: 0, width: size, height: size)
         self.dotsView.center                = CGPoint(x: self.textLabel.center.x, y: self.bounds.height - (2.5 * size))
 //        self.dotsView.layer.cornerRadius    = size * 0.5 // round it
-        self.dotsView.image = UIImage.init(named: imageName)
+        self.dotsView.image = eventType.imageName
         
         switch style.cellShape {
         case .square:
