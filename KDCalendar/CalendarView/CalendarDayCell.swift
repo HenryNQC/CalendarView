@@ -37,18 +37,18 @@ open class CalendarDayCell: UICollectionViewCell {
         var selectedImage: UIImage? {
             switch self {
             case .star:
-                return UIImage.init(named: "ic_calendar_star_selected")
+                return ImageProvider.image(named: "ic_calendar_star_selected")
             case .dot:
-                return UIImage.init(named: "ic_calendar_dot_selected")
+                return ImageProvider.image(named: "ic_calendar_dot_selected")
             }
         }
         
         var unselectedImage: UIImage? {
             switch self {
             case .star:
-                return UIImage.init(named: "ic_calendar_star_unselected")
+                return ImageProvider.image(named: "ic_calendar_star_unselected")
             case .dot:
-                return UIImage.init(named: "ic_calendar_dot_unselected")
+                return ImageProvider.image(named: "ic_calendar_dot_unselected")
             }
         }
     }
@@ -210,7 +210,7 @@ open class CalendarDayCell: UICollectionViewCell {
         let size                            = self.bounds.height * 0.08 // always a percentage of the whole cell
         self.dotsView.frame                 = CGRect(x: 0, y: 0, width: size, height: size)
         self.dotsView.center                = CGPoint(x: self.textLabel.center.x, y: self.bounds.height - (2.5 * size))
-        self.dotsView.contentMode = .scaleAspectFill
+        self.dotsView.contentMode = UIViewContentModeScaleAspectFit
 //        self.dotsView.layer.cornerRadius    = size * 0.5 // round it
         self.dotsView.image = eventType.selectedImage
         
