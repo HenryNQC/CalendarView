@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ic_star.png",
+      "filename" : "ic_calendar_dot_unselected.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ic_star@2x.png",
+      "filename" : "ic_calendar_dot_unselected@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ic_star@3x.png",
+      "filename" : "ic_calendar_dot_unselected@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

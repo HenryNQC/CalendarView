@@ -30,16 +30,25 @@ open class CalendarDayCell: UICollectionViewCell {
     var style: CalendarView.Style = CalendarView.Style.Default
     var imageName: String = ""
     
-    public enum EventType: Int{
+    public enum EventType: Int {
         case star = 0
         case dot = 1
         
-        var imageName: UIImage? {
+        var selectedImage: UIImage? {
             switch self {
             case .star:
-                return UIImage.init(named: "ic_star")
+                return UIImage.init(named: "ic_calendar_star_selected")
             case .dot:
-                return UIImage.init(named: "ic_dot")
+                return UIImage.init(named: "ic_calendar_dot_selected")
+            }
+        }
+        
+        var unselectedImage: UIImage? {
+            switch self {
+            case .star:
+                return UIImage.init(named: "ic_calendar_star_unselected")
+            case .dot:
+                return UIImage.init(named: "ic_calendar_dot_unselected")
             }
         }
     }
@@ -128,6 +137,7 @@ open class CalendarDayCell: UICollectionViewCell {
                 self.bgView.layer.borderColor = style.cellSelectedBorderColor.cgColor
                 self.bgView.layer.borderWidth = style.cellSelectedBorderWidth
                 self.bgView.backgroundColor = style.cellSelectedColor
+                self.dotsView.image = eventType.selectedImage
             case false:
                 self.bgView.layer.borderColor = style.cellBorderColor.cgColor
                 self.bgView.layer.borderWidth = style.cellBorderWidth
@@ -136,6 +146,7 @@ open class CalendarDayCell: UICollectionViewCell {
                 } else {
                     self.bgView.backgroundColor = style.cellColorDefault
                 }
+                self.dotsView.image = eventType.unselectedImage
             }
             
             updateTextColor()
@@ -200,7 +211,13 @@ open class CalendarDayCell: UICollectionViewCell {
         self.dotsView.frame                 = CGRect(x: 0, y: 0, width: size, height: size)
         self.dotsView.center                = CGPoint(x: self.textLabel.center.x, y: self.bounds.height - (2.5 * size))
 //        self.dotsView.layer.cornerRadius    = size * 0.5 // round it
-        self.dotsView.image = eventType.imageName
+        self.dotsView.image = eventType.selectedImage
+        
+        if isSelected {
+            self.dotsView.image = eventType.selectedImage
+        } else {
+            self.dotsView.image = eventType.unselectedImage
+        }
         
         switch style.cellShape {
         case .square:
