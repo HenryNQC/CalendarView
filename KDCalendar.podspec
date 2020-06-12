@@ -21,6 +21,8 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/mmick66/CalendarView.git", :tag => s.version }
 
+  s.resources = "KDCalendar/*.xcassets"
+
   s.default_subspec = 'EventManager'
 
   s.subspec 'Core' do |ss|

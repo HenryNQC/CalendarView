@@ -10,14 +10,6 @@
 		07CAD0182493611B00AB23CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEFD655B1ACC072000ADE917 /* Images.xcassets */; };
 		07CAD01A249362CA00AB23CC /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CAD019249362CA00AB23CC /* ImageProvider.swift */; };
 		07CAD01B249362CA00AB23CC /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CAD019249362CA00AB23CC /* ImageProvider.swift */; };
-		07CAD02124936CBB00AB23CC /* ic_calendar_dot_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CAD01D24936CBB00AB23CC /* ic_calendar_dot_selected.png */; };
-		07CAD02224936CBB00AB23CC /* ic_calendar_dot_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CAD01D24936CBB00AB23CC /* ic_calendar_dot_selected.png */; };
-		07CAD02324936CBB00AB23CC /* ic_calendar_dot_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CAD01E24936CBB00AB23CC /* ic_calendar_dot_unselected.png */; };
-		07CAD02424936CBB00AB23CC /* ic_calendar_dot_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CAD01E24936CBB00AB23CC /* ic_calendar_dot_unselected.png */; };
-		07CAD02524936CBB00AB23CC /* ic_calendar_star_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CAD01F24936CBB00AB23CC /* ic_calendar_star_selected.png */; };
-		07CAD02624936CBB00AB23CC /* ic_calendar_star_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CAD01F24936CBB00AB23CC /* ic_calendar_star_selected.png */; };
-		07CAD02724936CBB00AB23CC /* ic_calendar_star_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CAD02024936CBB00AB23CC /* ic_calendar_star_unselected.png */; };
-		07CAD02824936CBB00AB23CC /* ic_calendar_star_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CAD02024936CBB00AB23CC /* ic_calendar_star_unselected.png */; };
 		ADC21D7F208C5DE400200022 /* CalendarView_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = ADC21D7D208C5DE400200022 /* CalendarView_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADC21D82208C5DE400200022 /* CalendarView_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC21D7B208C5DE400200022 /* CalendarView_iOS.framework */; };
 		ADC21D83208C5DE400200022 /* CalendarView_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADC21D7B208C5DE400200022 /* CalendarView_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -81,10 +73,6 @@
 
 /* Begin PBXFileReference section */
 		07CAD019249362CA00AB23CC /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
-		07CAD01D24936CBB00AB23CC /* ic_calendar_dot_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_calendar_dot_selected.png; sourceTree = "<group>"; };
-		07CAD01E24936CBB00AB23CC /* ic_calendar_dot_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_calendar_dot_unselected.png; sourceTree = "<group>"; };
-		07CAD01F24936CBB00AB23CC /* ic_calendar_star_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_calendar_star_selected.png; sourceTree = "<group>"; };
-		07CAD02024936CBB00AB23CC /* ic_calendar_star_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_calendar_star_unselected.png; sourceTree = "<group>"; };
 		ADC21D7B208C5DE400200022 /* CalendarView_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarView_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC21D7D208C5DE400200022 /* CalendarView_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarView_iOS.h; sourceTree = "<group>"; };
 		ADC21D7E208C5DE400200022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,17 +125,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07CAD01C24936C9700AB23CC /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				07CAD01D24936CBB00AB23CC /* ic_calendar_dot_selected.png */,
-				07CAD01E24936CBB00AB23CC /* ic_calendar_dot_unselected.png */,
-				07CAD01F24936CBB00AB23CC /* ic_calendar_star_selected.png */,
-				07CAD02024936CBB00AB23CC /* ic_calendar_star_unselected.png */,
-			);
-			path = Image;
-			sourceTree = "<group>";
-		};
 		ADC21D7C208C5DE400200022 /* CalendarView iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +137,6 @@
 		BEFD65461ACC072000ADE917 = {
 			isa = PBXGroup;
 			children = (
-				07CAD01C24936C9700AB23CC /* Image */,
 				BEF6665E1AEA50140012EC2E /* EventKit.framework */,
 				BEFD65511ACC072000ADE917 /* KDCalendar */,
 				BEFD65671ACC072000ADE917 /* KDCalendarTests */,
@@ -358,11 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07CAD02624936CBB00AB23CC /* ic_calendar_star_selected.png in Resources */,
-				07CAD02224936CBB00AB23CC /* ic_calendar_dot_selected.png in Resources */,
 				07CAD0182493611B00AB23CC /* Images.xcassets in Resources */,
-				07CAD02424936CBB00AB23CC /* ic_calendar_dot_unselected.png in Resources */,
-				07CAD02824936CBB00AB23CC /* ic_calendar_star_unselected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,13 +342,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07CAD02124936CBB00AB23CC /* ic_calendar_dot_selected.png in Resources */,
-				07CAD02724936CBB00AB23CC /* ic_calendar_star_unselected.png in Resources */,
 				BEFD655A1ACC072000ADE917 /* Main.storyboard in Resources */,
-				07CAD02524936CBB00AB23CC /* ic_calendar_star_selected.png in Resources */,
 				BEFD655F1ACC072000ADE917 /* LaunchScreen.xib in Resources */,
 				BEFD655C1ACC072000ADE917 /* Images.xcassets in Resources */,
-				07CAD02324936CBB00AB23CC /* ic_calendar_dot_unselected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
