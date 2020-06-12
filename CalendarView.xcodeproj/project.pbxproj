@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07CAD0182493611B00AB23CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEFD655B1ACC072000ADE917 /* Images.xcassets */; };
 		ADC21D7F208C5DE400200022 /* CalendarView_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = ADC21D7D208C5DE400200022 /* CalendarView_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADC21D82208C5DE400200022 /* CalendarView_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC21D7B208C5DE400200022 /* CalendarView_iOS.framework */; };
 		ADC21D83208C5DE400200022 /* CalendarView_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADC21D7B208C5DE400200022 /* CalendarView_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -329,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CAD0182493611B00AB23CC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
