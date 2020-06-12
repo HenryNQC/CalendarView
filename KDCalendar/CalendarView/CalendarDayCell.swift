@@ -37,18 +37,18 @@ open class CalendarDayCell: UICollectionViewCell {
         var selectedImage: UIImage? {
             switch self {
             case .star:
-                return ImageProvider.image(named: "ic_calendar_star_selected")
+                return UIImage.init(named: "ic_calendar_star_selected")
             case .dot:
-                return ImageProvider.image(named: "ic_calendar_dot_selected")
+                return UIImage.init(named: "ic_calendar_dot_selected")
             }
         }
         
         var unselectedImage: UIImage? {
             switch self {
             case .star:
-                return ImageProvider.image(named: "ic_calendar_star_unselected")
+                return UIImage.init(named: "ic_calendar_star_unselected")
             case .dot:
-                return ImageProvider.image(named: "ic_calendar_dot_unselected")
+                return UIImage.init(named: "ic_calendar_dot_unselected")
             }
         }
     }
