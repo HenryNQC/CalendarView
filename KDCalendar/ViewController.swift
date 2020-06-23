@@ -57,14 +57,12 @@ class ViewController: UIViewController {
         style.headerBackgroundColor    = UIColor.white
         style.weekdaysBackgroundColor  = UIColor.white
         style.firstWeekday             = .sunday
-        
-        style.locale                   = Locale(identifier: "en_US")
-        
+                
         style.cellFont = UIFont(name: "Helvetica", size: 20.0) ?? UIFont.systemFont(ofSize: 20.0)
         style.headerFont = UIFont(name: "Helvetica", size: 20.0) ?? UIFont.systemFont(ofSize: 20.0)
         style.weekdaysFont = UIFont(name: "Helvetica", size: 14.0) ?? UIFont.systemFont(ofSize: 14.0)
         
-        style.locale = Locale.init(identifier: "ja_JP")
+        style.locale = Locale.init(identifier: "ja_VN")
         calendarView.style = style
         
         calendarView.dataSource = self
