@@ -133,7 +133,14 @@ extension CalendarView: UICollectionViewDelegateFlowLayout {
         
         let year = self.calendar.component(.year, from: date)
 
-        self.headerView.monthLabel.text = dataSource?.headerString(date) ?? monthName + " " + String(year)
+        let jpLocale = Locale(identifier: "ja_JP")
+        
+        if formatter.locale == jpLocale {
+            self.headerView.monthLabel.text = dataSource?.headerString(date) ?? String(year) + "年" + monthName
+        } else {
+            self.headerView.monthLabel.text = dataSource?.headerString(date) ?? monthName + " " + String(year)
+        }
+        
         
         self.displayDate = date
     }
